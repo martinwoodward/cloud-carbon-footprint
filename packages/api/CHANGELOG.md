@@ -1,5 +1,41 @@
 # @cloud-carbon-footprint/api
 
+## 0.3.0
+
+### Minor Changes
+
+- ababb826: Extracts two new packages app and common to avoid circular dependancies and make it easier to extract cloud provider packages
+
+### Patch Changes
+
+- c7fa7db0: Updates dependencies to the latest
+- 54c6e5fc: updates check for error type
+
+  `packages/api/src/api.ts`:
+
+  ```diff
+      // ...
+
+        } catch (e) {
+          apiLogger.error(`Unable to process footprint request.`, e)
+  -       if (e instanceof EstimationRequestValidationError) {
+  +       if (
+  +          e.constructor.name ===
+  +          EstimationRequestValidationError.prototype.constructor.name
+  +       ) {
+            res.status(400).send(e.message)
+  -       } else if (e instanceof EstimationRequestValidationError) {
+  +       } else if (
+  +          e.constructor.name === PartialDataError.prototype.constructor.name
+  +       ) {
+            res.status(416).send(e.message)
+          } else res.status(500).send('Internal Server Error')
+
+      // ...
+  ```
+
+  - @cloud-carbon-footprint/app@0.0.2
+
 ## 0.2.5
 
 ### Patch Changes

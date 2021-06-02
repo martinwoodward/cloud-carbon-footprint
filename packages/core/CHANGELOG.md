@@ -1,5 +1,16 @@
 # @cloud-carbon-footprint/core
 
+## 0.8.0
+
+### Minor Changes
+
+- f9fbcb4c: Updates GCPCredentials class to us the @google-cloud/iam-credentials library instead, to reduce the core package size
+- ababb826: Extracts two new packages app and common to avoid circular dependancies and make it easier to extract cloud provider packages
+
+### Patch Changes
+
+- c7fa7db0: Updates dependencies to the latest
+
 ## 0.7.0
 
 ### Minor Changes

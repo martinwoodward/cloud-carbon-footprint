@@ -1,5 +1,19 @@
 # @cloud-carbon-footprint/cli
 
+## 0.4.0
+
+### Minor Changes
+
+- ababb826: Extracts two new packages app and common to avoid circular dependancies and make it easier to extract cloud provider packages
+
+### Patch Changes
+
+- c7fa7db0: Updates dependencies to the latest
+- Updated dependencies [f9fbcb4c]
+- Updated dependencies [c7fa7db0]
+- Updated dependencies [ababb826]
+  - @cloud-carbon-footprint/core@0.8.0
+
 ## 0.3.3
 
 ### Patch Changes

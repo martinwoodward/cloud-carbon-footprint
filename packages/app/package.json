@@ -1,6 +1,6 @@
 {
   "name": "@cloud-carbon-footprint/app",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "Apache-2.0",
   "description": "The logic to bootstrap the cloud-carbon-footprint server-side application",
   "main": "src/index.ts",
@@ -41,7 +41,7 @@
   },
   "dependencies": {
     "@cloud-carbon-footprint/common": "^0.0.1",
-    "@cloud-carbon-footprint/core": "^0.7.0",
+    "@cloud-carbon-footprint/core": "^0.8.0",
     "@google-cloud/monitoring": "^2.3.1"
   },
   "devDependencies": {
